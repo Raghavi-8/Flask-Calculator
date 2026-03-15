@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='calc.css') }}">
+</head>
+
+<body>
+    <form action="/calculate" method="post">
+        <div class="calculate">
+            <input type="number" placeholder="enter first number" name="num1" step="any">
+            <input type="number" placeholder="enter second number" name="num2" step="any">
+            <ul>
+                <li>1 = add</li>
+                <li>2 = subtract</li>
+                <li>3 = multiply</li>
+                <li>4 = divide</li>
+                <li>5 = modulo</li>
+                <li>6 = power</li>
+            </ul>
+            <input type="number" placeholder="enter operation number" name="operation">
+            <button type="submit">Calculate</button>
+            <div class="result">
+            </div>
+        </div>
+    </form>
+    <p>Result: {{ result }}</p>
+</body>
+
+</html>
